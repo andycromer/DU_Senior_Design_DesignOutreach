@@ -37,7 +37,7 @@ void SendTextMessage() //Used to quickly check service with carrier. Sending
 {
   mySerial.println("AT+CMGF=1\r");    //Because we want to send the SMS in text mode
   delay(100);
-  mySerial.println("AT + CMGS = \"+17202347869\"");//send sms message, be careful need to add a country code before the cellphone number
+  mySerial.println("AT + CMGS = \"+1xxxxxxxxxx\"");//send sms message, be careful need to add a country code before the cellphone number
   delay(100);
   mySerial.println("This is the SODAQ, coming in loud and clear!");//the content of the message
   delay(100);
@@ -139,11 +139,11 @@ void XivelyCom()
   String barometer = "67.87";//
   
   //Sending Data Points
-  mySerial.print("{\"method\": \"put\",\"resource\": \"/feeds/159150126\",\"params\" : {},");//here is the feed you apply from pachube
+  mySerial.print("{\"method\": \"put\",\"resource\": \"/feeds/xxxxxxxxxxxx\",\"params\" : {},");//here is the feed you apply from pachube
   delay(500);
   //ShowSerialData();
   
-  mySerial.print("\"headers\": {\"X-ApiKey\":");//in here, you should replace your pachubeapikey
+  mySerial.print("\"headers\": {\"X-ApiKey\":");//in here, you should replace your xively key
   delay(500);
   //ShowSerialData();
  mySerial.print("\"7jc0RGaysFDK39ePIxcLeuRBSTOGbwqwxhK2TAAFw9Lgz82o\"},\"body\":");
