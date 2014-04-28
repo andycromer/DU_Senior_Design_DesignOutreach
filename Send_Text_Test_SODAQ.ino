@@ -4,7 +4,7 @@
 //April 26th, 2014
 //Senior Design - Team WaterPump
 
-//Code last Updated: April 27th, 2014
+//Code last Updated: April 28th, 2014
 
 
 /* Description of Code: This code allows for the user to test the SIM900 with the 
@@ -24,11 +24,11 @@ void setup()
 { 
   mySerial.begin(19200);                 // the GPRS baud rate 
   delay(3000);
-  mySerial.println("AT");
+  mySerial.println("AT");               //  the Sim900 waits to recive the first AT command, must be capatlizied so that it can match the baud rate.
   delay(3000);
-  mySerial.println("AT");
+  mySerial.println("AT");               //  Double send the AT command just in case.
   delay(3000);
-  pinMode(led, OUTPUT);
+  pinMode(led, OUTPUT);                 //  Set the led to output for debugging purpose / visual confirmation. 
   
 }
 
@@ -36,7 +36,7 @@ void SendTextMessage()
 {
   mySerial.println("AT+CMGF=1\r");    //Because we want to send the SMS in text mode
   delay(100);
-  mySerial.println("AT + CMGS = \"+1xxxxxxxxxx\"");//send sms message, be careful need to add a country code before the cellphone number
+  mySerial.println("AT + CMGS = \"+1xxxxxxxxxx\"");  //send sms message, be careful need to add a country code before the cellphone number
   delay(100);
   mySerial.println("This is the SODAQ, coming in loud and clear!");//the content of the message
   delay(100);
@@ -44,7 +44,7 @@ void SendTextMessage()
   delay(100);
   mySerial.println();
   delay(100);
-  mySerial.println("AT$GPSACP") ;  
+  mySerial.println("AT$GPSACP") ;   
 }
 
 
