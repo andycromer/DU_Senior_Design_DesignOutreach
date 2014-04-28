@@ -1,4 +1,3 @@
-
 //Text Message Configuration and Testing for SIM900 on SODAQ board.
 
 //Andy Cromer
@@ -37,7 +36,7 @@ void SendTextMessage()
 {
   mySerial.println("AT+CMGF=1\r");    //Because we want to send the SMS in text mode
   delay(100);
-  mySerial.println("AT + CMGS = \"+17202347869\"");//send sms message, be careful need to add a country code before the cellphone number
+  mySerial.println("AT + CMGS = \"+1xxxxxxxxxx\"");//send sms message, be careful need to add a country code before the cellphone number
   delay(100);
   mySerial.println("This is the SODAQ, coming in loud and clear!");//the content of the message
   delay(100);
