@@ -4,7 +4,7 @@
 //May 6th, 2014
 //Senior Design - Team WaterPump
 
-//Code last Updated: May 6thth, 2014
+//Code last Updated: May 6th, 2014
 
 
 /* Description of Code: This code allows for the user to test the SIM900 with the 
